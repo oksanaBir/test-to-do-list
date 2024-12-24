@@ -1,8 +1,9 @@
 import { TasksProvider } from "./TasksContext";
 import AddTaskForm from "./components/AddTaskForm";
-import TaskList from "./components/TaskList";
+import { TaskList } from "./components/TaskList";
+import { JSX } from 'react';
 
-function App() {
+function App(): JSX.Element  {
   return (
     <TasksProvider>
       <div className="container">
@@ -14,4 +15,4 @@ function App() {
   );
 };
 
-export default App;
+export { App };

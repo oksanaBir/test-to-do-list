@@ -1,15 +1,17 @@
 import { 
+  ReactNode,
+  FC,
   useState,
   useEffect,
   useContext,
-  createContext 
-} from "react";
+  createContext
+} from 'react';
 
-const TasksContext = createContext();
+const TasksContext = createContext<any>(null);
 
 export const useTasks = () => useContext(TasksContext);
 
-export const TasksProvider = ({ children }) => {
+export const TasksProvider: FC<any> = ({ children }: { children: ReactNode }) => {
   // need for correct display of tasks after the update
   const [tasks, setTasks] = useState(() => {
     const savedTasks = localStorage.getItem("tasks");

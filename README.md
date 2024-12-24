@@ -1,6 +1,6 @@
 # TODO List Application
 
-A simple and responsive TODO list application built with React.
+A simple and responsive TODO list application built with React. Tasks are saved locally using `localStorage`.
 
 ## Features
 
@@ -14,14 +14,14 @@ A simple and responsive TODO list application built with React.
 ```
 $ git clone https://github.com/oksanaBir/test-to-do-list.git test-to-do-list
 $ cd test-to-do-list
-$ npm run build
-$ npm start
+$ npm build
+$ npm run start
 ```
 
-**Running the Application**
+**"Running the Application"**
 
 http://localhost:3000/
 
-**Author** 
+**"Author"** 
 
 Created by Oksana Biryukova.

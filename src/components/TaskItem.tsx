@@ -1,4 +1,14 @@
-function TaskItem({ task, handleCheck, handleDelete }) {
+import React from 'react';
+
+import { TasksContextType } from '../types';
+
+type TaskItemProps = {
+  task: TasksContextType,
+  handleCheck: (id: string) => void,
+  handleDelete: (id: string) => void
+}
+
+const TaskItem = React.memo(({ task, handleCheck, handleDelete }: TaskItemProps) => {
   const { id, text, completed } = task;
 
   return (
@@ -12,6 +22,6 @@ function TaskItem({ task, handleCheck, handleDelete }) {
       <button className="button" onClick={() => handleDelete(id)}>Delete</button>
     </li>
   )
-};
+});
 
 export default TaskItem;
